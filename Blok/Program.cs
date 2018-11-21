@@ -1,15 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Blok
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
+            Blockchain blockchain = new Blockchain(5);
+            blockchain.addBlock(blockchain.newBlock("Tout sur le Bitcoin"));
+            blockchain.addBlock(blockchain.newBlock("Sylvain Saurel"));
+            blockchain.addBlock(blockchain.newBlock("https://www.toutsurlebitcoin.fr"));
+
+            Console.WriteLine("Blockchain valid ? " + blockchain.isBlockChainValid());
+
+            blockchain.showInfo();
+
+            Console.ReadLine();
         }
     }
 }
