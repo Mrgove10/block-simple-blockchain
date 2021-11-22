@@ -1,6 +1,6 @@
 ﻿namespace Blok
 {
-    internal class Utils
+    internal static class Utils
     {
         public static string zeros(int number)
         {
